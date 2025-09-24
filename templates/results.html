@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block icerik %}
+<div class="kart" style="text-align:center;">
+  <h2>Sınav Sonucu</h2>
+  <p>Skorunuz: <strong style="color:#2ea44f;">{{ son }}%</strong></p>
+  <p>Kişisel Yüksek Skorunuz: {{ kisisel }}%</p>
+  <p>Genel Yüksek Skor: {{ genel }}%</p>
+  <div style="margin-top:12px;">
+    <a class="buton" href="{{ url_for('sinav') }}">Yeniden Dene</a>
+    <a class="buton ikincil" href="{{ url_for('gecmis') }}" style="margin-left:8px;">Geçmişim</a>
+  </div>
+</div>
+{% endblock %}

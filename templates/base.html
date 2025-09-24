@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ baslik or "Quiz" }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; min-height:100vh; position:relative; padding-bottom:120px; background:#f6f6f6; }
+    header { background:#fff; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee;}
+    .kapsayici { max-width:900px; margin:24px auto; padding:0 16px; }
+    .kart { background:#fff; padding:18px 20px; border-radius:8px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+    .buton { background:#2ea44f; color:#fff; padding:10px 16px; border:none; border-radius:6px; cursor:pointer; text-decoration:none; display:inline-block; }
+    .buton.ikincil { background:#6c757d; }
+    footer { position:absolute; left:0; right:0; bottom:0; padding:12px 16px; background:#fafafa; color:#444; border-top:1px solid #eee; text-align:center;}
+    input[type="text"] { width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; }
+    label { display:block; margin:6px 0; }
+    .secenek { background:#f8f8f8; padding:8px 10px; border-radius:6px; margin:6px 0; }
+    .puan { text-align:right; font-size:14px; }
+    .puan span { display:block; }
+    .baslik { text-align:center; font-size:26px; font-weight:bold; margin:8px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <strong>Quiz</strong>
+      <nav style="display:inline-block; margin-left:16px;">
+        <a href="{{ url_for('sinav') }}">Sınav</a>
+        <a href="{{ url_for('gecmis') }}">Geçmiş</a>
+        <a href="{{ url_for('gorsel') }}">Görsel Algılama</a>
+        <a href="{{ url_for('hakkinda') }}">Hakkında</a>
+      </nav>
+    </div>
+    <div class="puan">
+      <span><strong>Kişisel Yüksek:</strong> {{ kisisel_en_yuksek }}%</span>
+      <span><strong>Genel Yüksek:</strong> {{ genel_en_yuksek }}%</span>
+    </div>
+  </header>
+  <div class="kapsayici">
+    {% with m = get_flashed_messages(with_categories=true) %}
+      {% if m %}
+        {% for t, y in m %}
+          <div class="kart">{{ y }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block icerik %}{% endblock %}
+  </div>
+  <footer>
+    <em>Hazırlayan: Betül Demir</em>
+  </footer>
+</body>
+</html>

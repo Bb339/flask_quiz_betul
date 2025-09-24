@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block icerik %}
+<div class="kart">
+  <h2>Deneme Geçmişi</h2>
+  {% if denemeler %}
+    <ul>
+      {% for d in denemeler %}
+        <li>{{ d.zaman.strftime("%Y-%m-%d %H:%M") }} — Skor: {{ "%.2f"|format(d.skor) }}% ({{ d.dogru_sayisi }}/{{ d.toplam }})</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Kayıt bulunamadı. Önce bir sınav çözün.</p>
+  {% endif %}
+</div>
+{% endblock %}

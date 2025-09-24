@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block icerik %}
+<div class="baslik">Quiz</div>
+<form method="post" action="{{ url_for('gonder') }}">
+  <div class="kart">
+    <label>Adınız:</label>
+    <input type="text" name="ad" required placeholder="örn. betul.demir">
+  </div>
+
+  {% for s in sorular %}
+    <div class="kart">
+      <strong>Soru {{ loop.index }} ({{ s.konu }}):</strong>
+      <p>{{ s.yazi }}</p>
+      {% for o in s.secenekler %}
+        <label class="secenek">
+          <input type="radio" name="s_{{ s.id }}" value="{{ o.id }}" required>
+          {{ o.yazi }}
+        </label>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  <div class="kart" style="text-align:center;">
+    <button class="buton" type="submit">Gönder</button>
+  </div>
+</form>
+{% endblock %}
