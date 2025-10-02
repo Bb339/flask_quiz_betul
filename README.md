@@ -1,5 +1,6 @@
 Bu proje, elma yaprağı ve şeftali yaprağı sınıflarını ayırt edebilen bir derin öğrenme modelini içermektedir. Model, Google’ın Teachable Machine
  platformu kullanılarak eğitilmiştir.
+<img width="1812" height="807" alt="Ekran görüntüsü 2025-10-02 154926" src="https://github.com/user-attachments/assets/dfd94f46-1c91-4f73-aa9a-75e7971a77a8" />
 
 Veri Seti
 
@@ -40,7 +41,6 @@ elma yaprağı
 Kullanım
 
 Model .tflite formatında dışa aktarılmıştır ve Flask tabanlı web uygulamasında kullanılabilir.
-<img width="1812" height="807" alt="Ekran görüntüsü 2025-10-02 154926" src="https://github.com/user-attachments/assets/4aedee33-9d21-4565-8717-571cf57a8071" />
 
 model.tflite → eğitilmiş model
 
