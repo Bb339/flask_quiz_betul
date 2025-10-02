@@ -21,16 +21,6 @@ templates/ → HTML şablonları
 requirements.txt → Gerekli bağımlılıklar
 
 
-🚀 Çalıştırmak için
-pip install -r requirements.txt
-python app.py
-
-
-Tarayıcıda şu adresten uygulamaya erişebilirsin:
-👉 http://127.0.0.1:5000/
-
-
-
 2. 🌿 Yaprak Sınıflandırma Modeli
 
 Bu model, elma yaprağı ve şeftali yaprağı sınıflarını ayırt edebilmektedir.Google’ın Teachable Machine platformu kullanılarak eğitilmiştir.
