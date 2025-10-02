@@ -7,3 +7,6 @@ yuklemeler/
 veri
 .vscode/
 .idea/
+model/*.tflite
+model/*.h5
+model/labels.txt
