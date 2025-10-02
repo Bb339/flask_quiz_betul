@@ -7,9 +7,12 @@ Bu repo iki ana çalışmayı içermektedir:
 🌿 Elma & Şeftali Yaprakları Sınıflandırma Modeli
 
 
+
 1. 🎯 Flask Quiz Uygulaması
 
 Bu uygulama, Flask framework ile hazırlanmış basit bir quiz sistemidir. Kullanıcıya sorular sorulur.Cevaplara göre doğru/yanlış geri bildirimi verilir.Sonuçlar ekranda görüntülenir.
+
+
 
 📂 Dosyalar
 
@@ -27,6 +30,7 @@ Tarayıcıda şu adresten uygulamaya erişebilirsin:
 👉 http://127.0.0.1:5000/
 
 
+
 2. 🌿 Yaprak Sınıflandırma Modeli
 
 Bu model, elma yaprağı ve şeftali yaprağı sınıflarını ayırt edebilmektedir.Google’ın Teachable Machine platformu kullanılarak eğitilmiştir.
@@ -38,15 +42,20 @@ Elma yaprağı: 260 görüntü
 
 Şeftali yaprağı: 324 görüntü
 
+
 🧠 Eğitim Süreci
 
 Görseller sınıflara ayrıldı.CNN tabanlı model Teachable Machine üzerinde otomatik olarak eğitildi. Eğitim sonrası model, yüklenen yaprak görüntülerini elma veya şeftali olarak tahmin edebilmektedir.
+
+
 
 📦 Çıktılar
 
 model/model.tflite → Eğitilmiş model dosyası
 model/labels.txt → Sınıf etiketleri
 model/README.txt → Model hakkında kısa bilgi
+
+
 
 
 📌 Özet
