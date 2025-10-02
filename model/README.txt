@@ -1,1 +1,1 @@
-keras_model.h5 ve labels.txt dosyalarını buraya koyunuz.
+Bu model elma ve şeftali yapraklarını sınıflandırmaktadır.
