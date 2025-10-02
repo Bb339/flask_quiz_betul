@@ -1,47 +1,78 @@
-Bu proje, elma yaprağı ve şeftali yaprağı sınıflarını ayırt edebilen bir derin öğrenme modelini içermektedir. Model, Google’ın Teachable Machine
+Flask Quiz & Yaprak Sınıflandırma Projesi
+
+Bu repo iki ana çalışmayı içermektedir:
+
+🎯 Flask Quiz Uygulaması
+
+🌿 Elma & Şeftali Yaprakları Sınıflandırma Modeli
+
+1. 🎯 Flask Quiz Uygulaması
+
+Bu uygulama, Flask framework ile hazırlanmış basit bir quiz sistemidir.
+
+Kullanıcıya sorular sorulur.
+
+Cevaplara göre doğru/yanlış geri bildirimi verilir.
+
+Sonuçlar ekranda görüntülenir.
+
+📂 Dosyalar
+
+app.py → Flask uygulaması
+
+templates/ → HTML şablonları
+
+requirements.txt → Gerekli bağımlılıklar
+
+🚀 Çalıştırmak için
+pip install -r requirements.txt
+python app.py
+
+
+Tarayıcıda şu adresten uygulamaya erişebilirsin:
+👉 http://127.0.0.1:5000/
+
+2. 🌿 Yaprak Sınıflandırma Modeli
+
+Bu model, elma yaprağı ve şeftali yaprağı sınıflarını ayırt edebilmektedir.
+Google’ın Teachable Machine
  platformu kullanılarak eğitilmiştir.
+
 <img width="1812" height="807" alt="Ekran görüntüsü 2025-10-02 154926" src="https://github.com/user-attachments/assets/dfd94f46-1c91-4f73-aa9a-75e7971a77a8" />
+📊 Veri Seti
 
-Veri Seti
+Elma yaprağı: 260 görüntü
 
-Elma yaprağı: 260 örnek görüntü
+Şeftali yaprağı: 324 görüntü
 
-Şeftali yaprağı: 324 örnek görüntü
+🧠 Eğitim Süreci
 
-Veriler hem kamera (webcam) hem de dosya yükleme (upload) yöntemleri ile sisteme eklenmiştir.
+Görseller sınıflara ayrıldı.
 
-Eğitim Süreci
+CNN tabanlı model Teachable Machine üzerinde otomatik olarak eğitildi.
 
-Görseller sınıflara ayrılarak modele tanıtıldı.
+Eğitim sonrası model, yüklenen yaprak görüntülerini elma veya şeftali olarak tahmin edebilmektedir.
 
-Teachable Machine otomatik olarak CNN tabanlı bir model eğitti.
+📦 Çıktılar
 
-Eğitim sonucunda, model yaprak görüntülerinden sınıf tahmini yapabilmektedir.
+model/model.tflite → Eğitilmiş model dosyası
 
-Görsel Açıklaması
+model/labels.txt → Sınıf etiketleri
 
-Aşağıdaki görselde eğitim sürecinden bir ekran görüntüsü yer almaktadır:
+model/README.txt → Model hakkında kısa bilgi
 
-Bu ekranda:
+🔗 Entegrasyon
 
-Elma yaprağı ve Şeftali yaprağı için kullanılan örnek veriler görülmektedir.
+Bu repo sayesinde hem quiz tabanlı eğitim uygulaması hem de görüntü tabanlı yaprak sınıflandırma modeli aynı projede bir araya getirilmiştir.
 
-Eğitim tamamlandığında sistem “Model Trained” bilgisi vermektedir.
+Quiz kısmı → Teorik bilgi ölçümü
 
-Sağ kısımda, modelin test aşamasında canlı kamera ya da görsel yükleme ile nasıl tahmin yaptığı görülebilir.
+Yaprak sınıflandırma kısmı → Pratik uygulama (AI ile sınıflandırma)
 
-Çıktılar
+📌 Özet
 
-Model, yeni bir yaprak görüntüsü verildiğinde çıktıyı şu şekilde üretir:
+Flask tabanlı quiz uygulaması ile kullanıcıya interaktif bir öğrenme ortamı sunulur.
 
-elma yaprağı
+Teachable Machine ile eğitilmiş CNN modeli sayesinde yaprak sınıflandırması yapılır.
 
-şeftali yaprağı
-
-Kullanım
-
-Model .tflite formatında dışa aktarılmıştır ve Flask tabanlı web uygulamasında kullanılabilir.
-
-model.tflite → eğitilmiş model
-
-labels.txt → sınıf etiketleri
+Proje, hem eğitim hem de tarımsal yapay zeka uygulamaları için temel bir örnek teşkil etmektedir.
