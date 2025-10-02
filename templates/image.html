@@ -2,21 +2,21 @@
 {% block icerik %}
 <div class="kart">
   <h2>Görsel Algılama</h2>
-  {% if not hazir %}
-    <p><strong>Not:</strong> Lütfen görsel yükleyiniz </p>
-  {% endif %}
+  <p>Lütfen görsel yükleyiniz. Bu model <b>elma yaprağı</b> ile <b>şeftali yaprağını</b> ayırt eder.</p>
   <form method="post" enctype="multipart/form-data">
     <input type="file" name="gorsel" accept="image/*" required>
     <button class="buton" type="submit">Yükle ve Sınıflandır</button>
   </form>
 </div>
+
 {% if tahmin %}
   <div class="kart">
     <h3>Sonuç</h3>
     {% if yol %}
-      <img src="{{ yol }}" alt="yuklenen" style="max-width:320px; display:block; margin-bottom:10px;"/>
+      <img src="{{ yol }}" alt="yuklenen" style="max-width:320px; display:block; margin-bottom:10px;">
     {% endif %}
-    <p><strong>Sınıf:</strong> {{ tahmin.etiket }} — <strong>Yüzde:</strong> {{ "%.2f"|format(tahmin.guven) }}</p>
+    <p><strong>Sınıf:</strong> {{ tahmin.etiket }} —
+       <strong>Yüzde:</strong> {{ "%.2f"|format(tahmin.guven * 100) }}%</p>
   </div>
 {% endif %}
 {% endblock %}
